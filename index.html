@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salpa — Gestión y Resultados</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #658c68;
+            --primary-hover: #7da980;
+            --background-color: #f8f9fa;
+            --text-color: #434343;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            height: 50px;
+            width: 132px;
+        }
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        .container {
+            max-width: 90%;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            flex: 1;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .dashboard-item {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            text-align: left;
+            flex-basis: calc(25% - 2rem);
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            top: 0;
+        }
+        .dashboard-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-hover-shadow);
+        }
+        .dashboard-title {
+            font-size: 1.2rem;
+            margin: 0 0 1.5rem 0;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .dashboard-link {
+            display: block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: 400;
+            transition: background-color var(--transition-speed);
+        }
+        .dashboard-link:hover {
+            background-color: var(--primary-hover);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            .dashboard-item {
+                padding: 1.5rem;
+                flex-basis: calc(50% - 2rem);
+            }
+            .dashboard-item:hover {
+                transform: translateY(-5px);
+            }
+            .header-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Salpa Logo" class="logo">
+    </header>
+    <div class="container">
+        <div class="dashboard-container">
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Solicitudes a Sistemas</h2>
+                <a href="#" class="dashboard-link">Acceder</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Nota de Pedido</h2>
+                <a href="#" class="dashboard-link">Generar</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Subir Pedido</h2>
+                <a href="#" class="dashboard-link">Subir</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Resultados y Proyecciones</h2>
+                <a href="https://docs.google.com/spreadsheets/d/1SHHFb_UFKUWh9kk7cTbrprf2nlCp5gLzCuSRYCdh61w/edit?gid=495542419#gid=495542419" class="dashboard-link" target="_blank">Ver</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Stock Histórico</h2>
+                <a href="https://lookerstudio.google.com/reporting/e9117bce-fdca-4a3f-afc8-725c50b65448/page/page_12345?s=qedPEN0mISY" class="dashboard-link" target="_blank">Ver</a>
+            </div>
+            <div class="dashboard-item">
+            <h2 class="dashboard-title">Stock Actual</h2>
+            <a href="https://lookerstudio.google.com/reporting/493964e7-7416-45f8-9806-dc37e484c981/page/28pEF" class="dashboard-link" target="_blank">Ver</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Dashboard Comercial</h2>
+                <a href="#" class="dashboard-link" target="_blank">Próximamente</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Dashboard Operaciones</h2>
+                <a href="#" class="dashboard-link" target="_blank">Próximamente</a>
+            </div>
+            <div class="dashboard-item">
+                <h2 class="dashboard-title">Dashboard RRHH</h2>
+                <a href="#" class="dashboard-link" target="_blank">Próximamente</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 — <a href="#">Salpa Datos</a> — #LaVidaEsAfuera
+    </footer>
+</body>
+</html>
