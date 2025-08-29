@@ -50,28 +50,27 @@
             padding: 0 2rem;
             flex: 1;
         }
-.dashboard-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch; /* 
-}
-
-.dashboard-item {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: var(--card-shadow);
-    text-align: left;
-    flex-basis: calc(25% - 2rem);
-    transition: all var(--transition-speed) ease;
-    position: relative;
-    top: 0;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between;
-}
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: stretch; /* 🔹 Todas las tarjetas misma altura */
+        }
+        .dashboard-item {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            text-align: left;
+            flex-basis: calc(25% - 2rem);
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            top: 0;
+            display: flex;           /* 🔹 Hace que el botón quede siempre abajo */
+            flex-direction: column;
+            justify-content: space-between;
+        }
         .dashboard-item:hover {
             transform: translateY(-10px);
             box-shadow: var(--card-hover-shadow);
@@ -145,7 +144,6 @@
                 <h2 class="dashboard-title">Subir Pedido</h2>
                 <a href="https://salpasistemas.github.io/import-pedidos" class="dashboard-link" target="_blank" rel="noopener noreferrer">Acceder</a>
             </div>
-            <!-- Nueva tarjeta Tutoriales -->
             <div class="dashboard-item">
                 <h2 class="dashboard-title">Tutoriales</h2>
                 <a href="https://salpasistemas.github.io/ventas/tutoriales/" class="dashboard-link" target="_blank" rel="noopener noreferrer">Acceder</a>
