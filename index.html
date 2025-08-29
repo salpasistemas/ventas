@@ -51,11 +51,9 @@
             flex: 1;
         }
         .dashboard-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 🔹 Siempre 4 columnas */
             gap: 2rem;
-            justify-content: center;
-            align-items: stretch; /* 🔹 Todas las tarjetas misma altura */
         }
         .dashboard-item {
             background: white;
@@ -63,11 +61,8 @@
             padding: 2rem;
             box-shadow: var(--card-shadow);
             text-align: left;
-            flex-basis: calc(25% - 2rem);
             transition: all var(--transition-speed) ease;
-            position: relative;
-            top: 0;
-            display: flex;           /* 🔹 Hace que el botón quede siempre abajo */
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
@@ -108,20 +103,15 @@
         footer a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 768px) {
-            .container {
-                margin: 2rem auto;
-                padding: 0 1rem;
+        /* 🔹 Responsive: en tablets 2x2 y en móvil 1x1 */
+        @media (max-width: 1024px) {
+            .dashboard-container {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .dashboard-item {
-                padding: 1.5rem;
-                flex-basis: calc(50% - 2rem);
-            }
-            .dashboard-item:hover {
-                transform: translateY(-5px);
-            }
-            .header-title {
-                font-size: 1.25rem;
+        }
+        @media (max-width: 600px) {
+            .dashboard-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
