@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salpa Sistemas - Tutoriales</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #658c68;
+            --primary-hover: #7da980;
+            --background-color: #f8f9fa;
+            --text-color: #434343;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            height: 50px;
+            width: 132px;
+        }
+        .container {
+            max-width: 90%;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            flex: 1;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            top: 0;
+            text-decoration: none;
+            color: var(--text-color);
+            flex-basis: calc(25% - 2rem);
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-hover-shadow);
+        }
+        .card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            .card {
+                flex-basis: calc(50% - 2rem);
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../logo.png" alt="Salpa Logo" class="logo">
+    </header>
+    <div class="container">
+        <h1 style="text-align: center; width: 100%; margin-bottom: 2rem; font-weight: 600;">Tutoriales</h1>
+        <div class="dashboard-container">
+            <a href="https://www.youtube.com/watch?v=oWi_tJTxxEQ" target="_blank" rel="noopener noreferrer" class="card">
+                <img src="https://img.youtube.com/vi/oWi_tJTxxEQ/0.jpg" alt="Miniatura DEMO - Nota de Pedido">
+                <div class="card-content">
+                    <h2 class="card-title">DEMO - Nota de Pedido</h2>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=vn-siDEe67Q" target="_blank" rel="noopener noreferrer" class="card">
+                <img src="https://img.youtube.com/vi/vn-siDEe67Q/0.jpg" alt="Miniatura DEMO - Subir Preventas Verano 2026">
+                <div class="card-content">
+                    <h2 class="card-title">DEMO - Subir Preventas Verano 2026</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
